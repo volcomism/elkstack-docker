@@ -38,7 +38,7 @@ Below is a basic configuration for Logstash Forwarder:
 ``` json
 {
   "network": {
-    "servers": [ "prod-datalake-control-01.datalake.chip-ec2.net:5001" ],
+    "servers": [ "<%HOSTNAME%>:5001" ],
     "ssl ca": "/etc/ssl/logstash.crt"
   },
   "files": [
@@ -58,7 +58,7 @@ Usage
 
 ``` yaml
 logstashforwarder:
-  image: chip/logstash-forwarder
+  image: volcomism/logstash-forwarder
   volumes:
     - ./config.json:/etc/logstash-forwarder/config.json
     - ./logstash.crt:/etc/ssl/logstash.crt

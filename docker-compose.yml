@@ -2,7 +2,7 @@ elasticsearch:
   build: elasticsearch/
   ports:
     - "9200:9200"
-  log_driver: syslog
+# log_driver: syslog
   restart: always
 
 logstash:
@@ -17,7 +17,7 @@ logstash:
     - "5001:5001"
   links:
     - elasticsearch
-  log_driver: syslog
+# log_driver: syslog
   restart: always
 
 kibana:
@@ -26,6 +26,6 @@ kibana:
     - "80:5601"
   links:
     - elasticsearch
-  log_driver: syslog
+# log_driver: syslog
   restart: always
 

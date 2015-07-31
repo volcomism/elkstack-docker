@@ -1,5 +1,5 @@
 logstashforwarder:
-  image: chip/logstash-forwarder
+  image: volcomism/logstash-forwarder
   volumes:
     - ./config.json:/etc/logstash-forwarder/config.json
     - ./logstash.crt:/etc/ssl/logstash.crt
