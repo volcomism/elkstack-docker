@@ -1,0 +1,2 @@
+# elkstack-docker
+dockerized elkstack
