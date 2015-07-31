@@ -1,0 +1,13 @@
+logstashforwarder:
+  image: chip/logstash-forwarder
+  volumes:
+    - ./config.json:/etc/logstash-forwarder/config.json
+    - ./logstash.crt:/etc/ssl/logstash.crt
+    - ./logstash.key:/etc/ssl/logstash.key
+  volumes_from:
+    - logs
+
+logs:
+  image: busybox
+  volumes:
+    - /var/log/syslog:/var/log/syslog

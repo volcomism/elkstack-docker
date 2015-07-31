@@ -1,0 +1,12 @@
+{
+  "network": {
+    "servers": [ "prod-datalake-control-01.datalake.chip-ec2.net:5001" ],
+    "ssl ca": "/etc/ssl/logstash.crt"
+  },
+  "files": [
+    {
+      "paths":  [ "/var/log/syslog" ],
+      "fields": { "type": "syslog" }
+    }
+  ]
+}
