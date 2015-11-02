@@ -41,4 +41,4 @@ The stack exposes 4 ports on your localhost:
 
 * 5000: Logstash TCP input.
 * 9200: Elasticsearch HTTP (with Marvel plugin accessible via [http://localhost:9200/_plugin/marvel](http://localhost:9200/_plugin/marvel))
-* 5601: Kibana 4 web interface (80 on host), access it via [http://localhost](http://localhost)
+* 5601: Kibana 4 web interface (8080 on host), access it via [http://localhost:8080](http://localhost:8080)
