@@ -23,7 +23,7 @@ logstash:
 kibana:
   build: kibana/
   ports:
-    - "80:5601"
+    - "8080:5601"
   links:
     - elasticsearch
 # log_driver: syslog
