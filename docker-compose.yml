@@ -1,31 +1,6 @@
-elasticsearch:
-  build: elasticsearch/
-  ports:
-    - "9200:9200"
-# log_driver: syslog
-  restart: always
-
-logstash:
-  image: logstash:latest
-  command: logstash -f /etc/logstash/conf.d/logstash.conf
-  volumes:
-    - logstash-conf:/etc/logstash/conf.d
-    - logstash-forwarder/logstash.crt:/etc/ssl/logstash.crt
-    - logstash-forwarder/logstash.key:/etc/ssl/logstash.key
-  ports:
-    - "5000:5000"
-    - "5001:5001"
-  links:
-    - elasticsearch
-# log_driver: syslog
-  restart: always
-
-kibana:
-  build: kibana/
+elk:
+  build: .
   ports:
     - "8080:5601"
-  links:
-    - elasticsearch
-# log_driver: syslog
-  restart: always
-
+    - "9200:9200"
+    - "5000:5000"
