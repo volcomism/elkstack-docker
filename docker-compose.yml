@@ -1,5 +1,6 @@
 elk:
-  build: .
+  image: volcomism/elkstack:latest
+# build: .
   ports:
     - "8080:5601"
     - "9200:9200"
